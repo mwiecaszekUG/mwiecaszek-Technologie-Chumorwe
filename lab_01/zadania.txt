@@ -1,0 +1,13 @@
+
+zad.3 
+docker run tworzy nowy kontener bazujący na danym obrazie,
+docker start uruchamia istniejący kontener przy czym robi to w tle
+(kontener nie będzie działał w oknie konsoli),
+docker start -a uruchamia kontener w oknie konsoli, w przypadku 
+hello-world powoduje to wyświetlenie wiadomości, a mysql logów startowych
+
+zad.4
+docker rm usuwa kontener, którego id lub nazwę podamy,
+docker system prune usuwa wszystkie kontenery,
+które nie są aktywne
+

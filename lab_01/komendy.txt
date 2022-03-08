@@ -1,0 +1,10 @@
+docker pull (nazwa) -- pobiera obraz
+docker run (nazwa) -- sprawdza czy mamy obraz lokalnie\ pobiera go\ i uruchamia
+docker start (id) lub (nadana nazwa) -- uruchamia lokalny kontener (robi to w tle)
+docker start -a (id) lub (nadana nazwa) -- uruchamia lokalny kontener (logi w consoli)
+docker ps -- lista uruchomionych kontenerów
+docker ps -a -- lista wszystkich kontenerów
+docker image ls -- lista pobranych obrazów
+docker stop (id) lub (nadana nazwa) -- zatrzymuję kontener
+docker rm (id) lub (nadana nazwa) -- usuwa kontener
+docker system prune -- usuwa wszystkie nieaktywne kontenery
