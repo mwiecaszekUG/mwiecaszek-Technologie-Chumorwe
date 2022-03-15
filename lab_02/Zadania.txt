@@ -1,0 +1,4 @@
+zad.4 
+	Nię będzie istaniał ponieważ polecenie docker run busybox stworzy nowy obraz z kontenerem
+busybox, a plik readme.txt istnieje w tym uruchomionym poprzednio, aby znaleźć ten plik
+należy uruchomić kontener, na którym został utworzony (docker start -i id/nazwa)
