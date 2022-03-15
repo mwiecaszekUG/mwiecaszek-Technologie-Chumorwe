@@ -7,4 +7,8 @@ docker ps -a -- lista wszystkich kontenerów
 docker image ls -- lista pobranych obrazów
 docker stop (id) lub (nadana nazwa) -- zatrzymuję kontener
 docker rm (id) lub (nadana nazwa) -- usuwa kontener
-docker system prune -- usuwa wszystkie nieaktywne kontenery
+docker system prune -- usuwa wszystkie nieaktywne dane i kontenery
+docker container prune -- usuwa nieaktywne kontenery
+docker logs - zapis logów kontenera
+docker exec (nazwa) (komenda) -- wykonuję polecenie w kontenerze
+docker exec -i container sh -c "cat > nazwa_pliku" -- tworzenie plików tekstowych
