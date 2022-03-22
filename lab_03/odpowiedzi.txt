@@ -1,0 +1,2 @@
+zad.1
+atrybut --name do nadania nazwy kontenera -p do ustawienia portu i -d bo nie potrzebowałem dostępu przez konsole
