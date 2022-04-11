@@ -12,3 +12,4 @@ docker container prune -- usuwa nieaktywne kontenery
 docker logs - zapis logów kontenera
 docker exec (nazwa) (komenda) -- wykonuję polecenie w kontenerze
 docker exec -i container sh -c "cat > nazwa_pliku" -- tworzenie plików tekstowych
+docker container inspect (nazwa) - konfiguracja kontenera
