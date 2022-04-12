@@ -17,4 +17,4 @@ docker container inspect (nazwa) - konfiguracja kontenera
 docker-compose up -- wykonuje compose i urucchamia kontener w consoli kont
 docker-compose up -d -- to samo tylko detach (bez dostępu z consoli)
 docker-compose stop -- zatrzymuje kontener z composed
-docker-compose down --volumes -- usuwa zapisane dane z poprzednich compose
+docker-compose down --volumes -- usuwa volumeny, kontenery, i sieci uzywane przez compose
