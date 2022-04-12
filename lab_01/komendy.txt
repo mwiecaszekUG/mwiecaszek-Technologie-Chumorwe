@@ -13,3 +13,8 @@ docker logs - zapis logów kontenera
 docker exec (nazwa) (komenda) -- wykonuję polecenie w kontenerze
 docker exec -i container sh -c "cat > nazwa_pliku" -- tworzenie plików tekstowych
 docker container inspect (nazwa) - konfiguracja kontenera
+
+docker-compose up -- wykonuje compose i urucchamia kontener w consoli kont
+docker-compose up -d -- to samo tylko detach (bez dostępu z consoli)
+docker-compose stop -- zatrzymuje kontener z composed
+docker-compose down --volumes -- usuwa zapisane dane z poprzednich compose
