@@ -6,13 +6,18 @@ const app = express();
 
 const redis = express.Router
 
-const PORT = process.env.PGPORT;
+const PORT = process.env.PORT
 
 const client = require('./redisClient');
 
+const bp = require('body-parser')
+
+app.use(bp.json())
+app.use(bp.urlencoded({ extended: true }))
+
 app.get('/', async(req, res) => {
 
-    const data = await client.lrange('user-queue', 0, -1)
+    const data = await client.lRange('user-queue', 0, -1)
 
   return res.send({
     dane: data
@@ -21,7 +26,7 @@ app.get('/', async(req, res) => {
 
 app.post('/', async (req, res) => {
   
-    await client.rpush('user-queue', req.body.person)
+    await client.rPush('user-queue', req.body.person)
  
   res.send("added")
 })
@@ -30,13 +35,18 @@ app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
 });
 
+
+try { client.connect(); } catch (err) {
+  console.log(err.message);
+}
+
 client.on('error', err => {
   console.error('Error connecting to Redis', err);
 });
 client.on('connect', () => {
     console.log(`Connected to Redis.`)
-    const port = process.env.PORT || 6379
+    const port = process.env.REDIS_PORT || 6379
     app.listen(port, () => {
-      console.log(`API server listening at ${process.env.host}:${port}`);
+      console.log(`API server listening at ${process.env.REDIS_HOST}:${port}`);
     });
 });

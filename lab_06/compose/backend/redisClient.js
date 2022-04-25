@@ -1,9 +1,13 @@
-const Redis = require("ioredis");
+const Redis = require("redis");
 
-const dbConnData = {
+
+const dbData = {
+  host: process.env.REDIS_HOST || "redis",
   port: process.env.REDIS_PORT || 6379,
-  host: process.env.REDIS_HOST || 'redis',
-};
-const client = new Redis(dbConnData);
+}
+
+const client = Redis.createClient({
+  url: `redis://@${dbData.host}:${dbData.port}`
+})
 
 module.exports = client;
