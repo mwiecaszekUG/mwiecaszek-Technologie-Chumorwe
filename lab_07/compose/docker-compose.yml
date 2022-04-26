@@ -11,8 +11,10 @@ services:
   api:
     
     build:
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
       context: ./backend
+    volumes:
+      - "C:/Users/qodsp/Desktop/Studia/semestr 4/Technologie_Chmurowe/mwiecaszek-Technologie-Chumorwe/lab_07/compose/backend:/app/backend"
     networks:
       - api_network
     environment:
