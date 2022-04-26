@@ -1,0 +1,98 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  background-image: url(https://wallpaperaccess.com/full/1290549.jpg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(219, 219, 219);
+  text-shadow: #000 0px 0px 10px;
+}
+
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+button {
+  background-color: lightblue;
+  height: 3vh;
+  width: auto;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  font-size: 2vh;
+  margin-left: 1vw;
+}
+
+
+div {
+  margin-top: 3vh;
+}
+
+.chat {
+  text-align: left;
+  background-color: grey;
+  border: solid black;
+  padding: 10px;
+}
+
+.riddle_list_element {
+  margin: 1rem 1rem;
+  border: chocolate;
+  border-width: 5px;
+  border-style: solid;
+  padding: 1rem;
+  box-shadow: 7px 7px 15px firebrick;
+}
+
+.room_list {
+  margin: 0.4rem 0.4rem;
+  border: blue;
+  border-width: 5px;
+  border-style: solid;
+  padding: 1rem;
+  box-shadow: 7px 7px 15px lightblue;
+}
+
+.chatMsg {
+  margin-left: 5%;
+  font-size: small;
+}
+
+.Head {
+  border: solid rgb(255, 0, 0);
+  padding: 3%;
+}
+
+.comment {
+  text-align: left;
+}
+
