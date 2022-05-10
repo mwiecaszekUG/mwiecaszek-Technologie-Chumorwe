@@ -1,0 +1,2 @@
+kubectl apply -f ./zad01.yaml  - stworzenie poda
+kubectl exec -it first-pod -- curl localhost:80 - pobranie tego co pod localhost:80 (wiadomość o pomyślym zainstalowaniu nginx)
