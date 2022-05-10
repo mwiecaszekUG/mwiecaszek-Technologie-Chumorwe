@@ -3,6 +3,9 @@ kind: Pod
 metadata:
   name: first-pod
 spec:
- containers:
-  - name: my-nginx
-    image: nginx:alpine
+  restartPolicy: Always
+  containers:
+    - name: my-nginx
+      image: nginx:alpine
+      command: ["/bin/sh","-c"]
+      args: ["nginx && wget localhost:80"]

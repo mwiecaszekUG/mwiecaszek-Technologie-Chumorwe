@@ -1,2 +1,4 @@
 kubectl apply -f ./zad01.yaml  - stworzenie poda
 kubectl exec -it first-pod -- curl localhost:80 - pobranie tego co pod localhost:80 (wiadomość o pomyślym zainstalowaniu nginx)
+kubectl delete pod first-pod - inaczej nie chciało akceptować zmian w .yaml
+kubectl logs first-pod - do wyświetlenie efektów wget w zadaniu 2
