@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: react-container
-          image: app
+          image: my-pod-react
   
   replicas: 1
   selector:
