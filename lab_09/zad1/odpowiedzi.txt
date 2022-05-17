@@ -1,0 +1,2 @@
+Został sworzony jeden pod oraz jeden by ReplicaSet
+Po usunięciu poda zostaje stworzony nowy
