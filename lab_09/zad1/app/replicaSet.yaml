@@ -1,12 +1,14 @@
 apiVersion: apps/v1
-kind: ReplicaSet
+kind: Deployment
 metadata:
-  name: replica-react
+  name: dep-react
   labels:
     app: myapp
     type: frontend
 
 spec:
+  selector:
+    name: myapp
   template:
     metadata:
       name: react-pod
@@ -16,10 +18,10 @@ spec:
     spec:
       containers:
         - name: react-container
-          image: my-pod-react
-  
-  replicas: 1
+          image: pod-react:release0
+  replicas: 2
   selector:
     matchLabels:
       app: myapp
       type: frontend
+
