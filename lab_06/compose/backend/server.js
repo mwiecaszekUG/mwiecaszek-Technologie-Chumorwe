@@ -6,7 +6,7 @@ const app = express();
 
 const redis = express.Router
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 5000
 
 const client = require('./redisClient');
 
@@ -17,7 +17,7 @@ app.use(bp.urlencoded({ extended: true }))
 
 app.get('/', async(req, res) => {
 
-    const data = await client.lRange('user-queue', 0, -1)
+    const data = await client.lRange('data', 0, -1)
 
   return res.send({
     dane: data
@@ -26,7 +26,7 @@ app.get('/', async(req, res) => {
 
 app.post('/', async (req, res) => {
   
-    await client.rPush('user-queue', req.body.person)
+    await client.rPush('data', req.body.data)
  
   res.send("added")
 })

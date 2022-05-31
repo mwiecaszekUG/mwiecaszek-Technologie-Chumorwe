@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: postgres-deployment
+  labels:
+    app: my-pg
+    type: db
+
+spec:
+  template:
+    metadata:
+      name: postgres-pod
+      labels:
+        app: my-pg
+        type: db
+
+    spec: 
+      containers:
+        - name: pg-container
+          image: postgres:alpine
+          env: 
+            - PG_PASSWORD=secret
+            - PG_USER=postgres
+            - PG_DB=postgres
+            - PG_PORT=8080
+           
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-pg
+      type: db 
