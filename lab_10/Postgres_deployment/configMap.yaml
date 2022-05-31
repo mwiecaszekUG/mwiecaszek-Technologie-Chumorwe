@@ -1,0 +1,10 @@
+apiVersion: v1.
+kind: ConfigMap
+metadata: 
+  name: configMap
+
+data:
+  PG_HOST: pg-database
+  PG_PORT: "8080"
+  PG_USER: postgres
+  PG_DB: posgres

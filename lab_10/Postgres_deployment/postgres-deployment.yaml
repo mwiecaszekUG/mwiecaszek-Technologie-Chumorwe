@@ -20,11 +20,32 @@ spec:
         - name: pg-container
           image: postgres:alpine
           env: 
-            - PG_PASSWORD=secret
-            - PG_USER=postgres
-            - PG_DB=postgres
-            - PG_PORT=8080
-           
+            - name: PG_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: password-secret
+                  key: PG_PASSWORD
+            - name: PG_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: configMap
+                  key: PG_USER
+            - name: PG_DB
+              valueFrom:
+                configMapKeyRef:
+                  name: configMap
+                  key: PG_DB
+            - name: PG_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: configMap
+                  key: PG_PORT
+            - name: PG_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: configMap
+                  key: PG_HOST
+
   replicas: 1
   selector:
     matchLabels:
