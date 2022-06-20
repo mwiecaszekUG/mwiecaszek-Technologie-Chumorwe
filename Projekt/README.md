@@ -1,7 +1,8 @@
 # bardzo prosta baza dla reżyserów i filmów + komponent todos (działający bardziej jako powiadomienia czy chat)
 # rezyserzy i filmy przechowywani sa w mongo, a todos w redisie (po 60s automatycznie sie usuwaja)
 # ingress wystawia aplikacje na port localhost:80
-# użyte zostały 3 repliki na wypadek awarii lub zmiany wersji
+# użyte zostały 3 repliki (frontu) na wypadek awarii lub zmiany wersji
+
 
 # tworzenie images
 
