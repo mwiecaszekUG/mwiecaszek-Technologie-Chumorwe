@@ -58,11 +58,9 @@ const Movie = mongoose.model('Movie', movieSchema);
 
 
 
-// mongoose.connect(`mongodb://${process.env.MONGO_SERVICE_HOST}:27017/mydatabase`);
+mongoose.connect(`mongodb://${process.env.MONGO_IP_CLUSTER_SERVICE_HOST}:27017/mydatabase`);
 
-mongoose.connect(`mongodb://${process.env.MONGO_SERBICE_HOST}:27017/mydatabase`);
-
-const redis = new Redis(6379, process.env.REDIS_SERVICE_HOST);
+const redis = new Redis(6379, process.env.REDIS_IP_CLUSTER_SERVICE_HOST);
 
 const app = express();
 app.use(bodyParser.json());
